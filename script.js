@@ -3,6 +3,8 @@ const hours = document.querySelector(".hours");
 const minutes = document.querySelector(".minutes");
 const seconds = document.querySelector(".seconds");
 const allParameters = document.querySelectorAll('.number');
+const launchText = document.querySelector("h1");
+
 
 const countdown = () => {
     const currentDate = new Date().getTime();
@@ -19,14 +21,13 @@ const countdown = () => {
     const minutesNumber = Math.floor((timeGap % hour) / minute);
     const secondsNumber = Math.floor((timeGap % minute) / second);
 
-    days.innerText = daysNumber;
-    hours.innerText = hoursNumber;
-    minutes.innerText = minutesNumber;
-    seconds.innerText = secondsNumber;
+    days.innerHTML = daysNumber;
+    hours.innerHTML = hoursNumber;
+    minutes.innerHTML = minutesNumber;
+    seconds.innerHTML = secondsNumber;
     
-    
-
     setTimeout(countdown, 1000);
+
 };
 
     
