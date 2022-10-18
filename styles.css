@@ -1,0 +1,156 @@
+:root {
+    --clr-grayish-blue: hsl(237, 18%, 59%);
+    --clr-soft-red: hsl(345, 95%, 68%);
+    --clr-dark-desaturated-blue: hsl(236, 21%, 26%);
+    --clr-very-dark-blue: hsl(235, 16%, 14%);
+    --clr-very-dark-blackish-blue: hsl(234, 17%, 12%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --fs-primary-title: 1.7rem;
+    --fs-number: 2.5em;
+    --fs-unit: 0.6rem;
+
+    --fs-primary-title-desktop-mq: 1rem;
+    --fs-number-desktop-mq: 3rem;
+    --fs-unit-desktop-mq: 0.7rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Red Hat Text', sans-serif;
+
+    background: url("images/bg-stars.svg"),
+                url("images/pattern-hills.svg"),
+                var(--clr-very-dark-blue);
+    background-repeat: no-repeat;
+    background-position: bottom 80% center, bottom right;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+h1 {
+    color: var(--clr-white);
+    text-align: center;
+    font-size: var(--fs-primary-title);
+    letter-spacing: 5px;
+    line-height: 1.1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 95vh;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(100% -3rem, 800px);
+}
+
+.primary-block {
+    display: block;
+}
+
+.upper {
+    padding-top: 15rem;
+}
+
+.upper section {
+    display: flex;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.number-wrap {
+    border-radius: 8px;
+    padding: 1rem;
+    width: 6rem;
+
+    background: linear-gradient(var(--clr-dark-desaturated-blue) 50%,
+            var(--clr-grayish-blue));
+
+}
+
+.number {
+    color: var(--clr-soft-red);
+    font-size: var(--fs-number);
+    text-align: center;
+}
+
+.unit {
+    color: var(--clr-grayish-blue);
+    font-size: var(--fs-unit);
+    text-align: center;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+}
+
+
+footer .container section {
+    display: flex;
+    gap: 2rem;
+}
+
+footer .container section img {
+    width: 30px;
+}
+
+
+@media (min-width: 60em) {
+    body {
+        background-position: bottom 70% center, bottom center;
+
+    }
+
+    .primary-block {
+        display: inline-block;
+    }
+
+    h1 {
+        font-size: var(--fs-primary-title-desktop-mq);
+    }
+
+    .number-wrap {
+        width: 7rem;
+    }
+
+    .number {
+        font-size: var(--fs-number-desktop-mq);
+    }
+
+    .unit {
+        font-size: var(--fs-unit-desktop-mq);
+    }
+
+
+    footer .container section img {
+        width: 20px;
+    }
+}
